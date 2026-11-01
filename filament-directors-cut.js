@@ -1,6 +1,6 @@
 
 (()=>{'use strict';
-const links=[['DISCOVER','index.html'],['THE WORLD','world.html'],['ATLAS','atlas.html'],['CHARACTERS','characters.html'],['NIGHTMARES','creatures.html'],['SYSTEMS','systems.html'],['JOURNAL','journal.html'],['ARCHIVE','archive.html']];
+const links=[['DISCOVER','index.html'],['THE WORLD','world.html'],['ATLAS','atlas.html'],['CHARACTERS','characters.html'],['NIGHTMARES','creatures.html'],['SYSTEMS','systems.html'],['JOURNAL','journal.html'],['GALLERY','gallery.html'],['ARCHIVE','archive.html']];
 const current=location.pathname.split('/').pop()||'index.html';
 function nav(){const header=document.querySelector('.site-header'),mobile=document.querySelector('.mobile-nav');if(!header||!mobile)return;const desk=header.querySelector('.desktop-nav');if(desk)desk.innerHTML=links.map(([t,u])=>'<a class="nav-link '+(current===u?'active':'')+'" href="'+u+'">'+t+'</a>').join('');mobile.innerHTML=links.map(([t,u])=>'<a class="nav-link '+(current===u?'active':'')+'" href="'+u+'">'+t+'</a>').join('');mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobile.classList.remove('open');header.querySelector('#menu-trigger')?.setAttribute('aria-expanded','false')}));}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
