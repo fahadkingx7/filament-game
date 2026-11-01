@@ -22,3 +22,10 @@
 #characters .gallery-caption h3,#studies .gallery-caption h3{font-size:clamp(26px,2.1vw,36px)}
 @media(max-width:960px){#characters .gallery-grid,#studies .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#characters .gallery-photo,#studies .gallery-photo{height:380px}}
 @media(max-width:560px){#characters .gallery-grid,#studies .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}#characters .gallery-photo,#studies .gallery-photo{height:245px}#characters .gallery-caption,#studies .gallery-caption{padding:13px}#characters .gallery-caption h3,#studies .gallery-caption h3{font-size:24px}#characters .gallery-caption p,#studies .gallery-caption p{font-size:11px}#characters .gallery-id,#studies .gallery-id{font-size:8px}}
+
+/* v4: two portrait cards per row; retain modest image height and uncropped subjects */
+#characters .gallery-grid,#studies .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:20px!important}
+#characters .gallery-photo,#studies .gallery-photo{height:390px!important}
+#characters .gallery-photo img,#studies .gallery-photo img{height:100%!important;max-height:100%!important;object-fit:contain!important}
+@media(max-width:700px){#characters .gallery-grid,#studies .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}#characters .gallery-photo,#studies .gallery-photo{height:245px!important}}
+@media(max-width:410px){#characters .gallery-photo,#studies .gallery-photo{height:210px!important}}
