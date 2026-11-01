@@ -1,0 +1,31 @@
+
+/* FILAMENT / component repair v16: no browser-default white controls */
+.system-home .systems-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important;align-items:stretch!important;margin-top:38px!important}
+.system-home .system-card{box-sizing:border-box!important;min-width:0!important;min-height:330px!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:18px!important;padding:clamp(25px,2.6vw,42px)!important;background:linear-gradient(145deg,#17201e,#0d1212)!important;border:1px solid #d9b47b35!important;color:#f0eadc!important;transition:transform .25s,border-color .25s!important;overflow:hidden!important}
+.system-home .system-card:hover{transform:translateY(-4px)!important;border-color:#d9b47b99!important}
+.system-home .system-card .system-icon{width:45px!important;height:45px!important;flex:0 0 45px!important;margin:0!important}
+.system-home .system-card .card-index{font:10px 'DM Mono',monospace!important;letter-spacing:.12em!important;color:#c4a776!important;display:block!important}
+.system-home .system-card h3{font:600 clamp(17px,1.4vw,23px)/1.3 Manrope,sans-serif!important;margin:0!important}
+.system-home .system-card p{font:14px/1.85 Manrope,sans-serif!important;color:#bcbab1!important;margin:0!important}
+.system-home .system-card .text-link{margin-top:auto!important;color:#d9b47b!important;font:10px 'DM Mono',monospace!important;letter-spacing:.08em!important}
+.power-console{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:0!important;align-items:stretch!important;min-width:0!important;border:1px solid #d9b47b36!important;background:#111917!important;margin-top:30px!important}
+.power-art{position:relative!important;min-width:0!important;min-height:540px!important;overflow:hidden!important;background:#101513!important}
+.power-art img{display:block!important;width:100%!important;height:100%!important;min-height:540px!important;object-fit:cover!important}
+.power-overlay{position:absolute!important;bottom:16px!important;left:16px!important;right:16px!important;font:10px 'DM Mono',monospace!important;letter-spacing:.1em!important;color:#e8cf9e!important;background:#07110edb!important;padding:10px!important}
+.power-interface{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:22px!important;min-width:0!important;padding:clamp(24px,4vw,65px)!important;background:linear-gradient(140deg,#17211c,#0c1412)!important}
+.console-top,.console-indicators{display:flex!important;flex-wrap:wrap!important;justify-content:space-between!important;gap:12px!important;color:#c4b79b!important;font:10px/1.5 'DM Mono',monospace!important}
+.charge-readout{display:flex!important;gap:12px!important;align-items:center!important}
+.charge-readout #charge-number{font:500 clamp(72px,8vw,130px)/1 'Cormorant Garamond',serif!important;color:#eadcc1!important}
+.charge-readout small{font:11px/1.5 'DM Mono',monospace!important;color:#c6b68e!important}
+.battery-track{height:11px!important;width:100%!important;border:1px solid #b7ae8a66!important;background:#030908!important;overflow:hidden!important}
+.battery-fill{height:100%!important;width:24%;background:linear-gradient(90deg,#a38e5b,#e7d3a0)!important;transition:width .3s!important}
+.crank-button{display:flex!important;align-items:center!important;justify-content:center!important;flex-wrap:wrap!important;gap:10px!important;width:100%!important;max-width:100%!important;min-height:58px!important;padding:16px 18px!important;white-space:normal!important;border:1px solid #d7b981!important;border-radius:2px!important;background:#d2b37c!important;color:#151713!important;box-shadow:none!important;text-shadow:none!important;cursor:pointer!important;font:700 12px/1.4 Manrope,sans-serif!important;letter-spacing:.06em!important;transition:background .2s,transform .2s!important}
+.crank-button:hover,.crank-button:focus-visible{background:#f0d39d!important;transform:translateY(-2px)!important}
+.crank-button small{flex-basis:100%!important;text-align:center!important;color:#323126!important;font:9px/1.5 'DM Mono',monospace!important;letter-spacing:.07em!important}
+.crank-icon{font-size:21px!important;line-height:1!important}
+.console-hint{font:12px/1.75 Manrope,sans-serif!important;color:#aaa99a!important;margin:0!important}
+button.filter-btn,button.tower-tab,button.moth-button{appearance:none!important;-webkit-appearance:none!important}
+button:focus-visible,a:focus-visible{outline:2px solid #e4c78a!important;outline-offset:3px!important}
+.site-header .wordmark .brand-mark{transform:translateY(2px)!important}
+@media(max-width:960px){.system-home .systems-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.power-console{grid-template-columns:1fr!important}.power-art,.power-art img{min-height:390px!important;height:390px!important}}
+@media(max-width:640px){.system-home .systems-grid{grid-template-columns:1fr!important;gap:12px!important}.system-home .system-card{min-height:0!important;padding:25px!important}.power-art,.power-art img{height:290px!important;min-height:290px!important}.power-interface{padding:25px!important;gap:18px!important}.crank-button{padding:15px 12px!important}.site-header .wordmark .brand-mark{transform:translateY(2px)!important}}
