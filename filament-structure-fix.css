@@ -1,0 +1,45 @@
+
+/* FILAMENT — comprehensive responsive layout correction / v12 */
+:root{--header-h:76px}
+body{overflow-x:hidden}
+main{overflow:visible!important}
+.page-home main{padding-top:var(--header-h)}
+body:not(.page-home) main{padding-top:var(--header-h)}
+.site-header .filament-logo-symbol,.footer .filament-logo-symbol{filter:drop-shadow(0 0 3px #d9b47b30)!important}
+.site-header .brand-mark,.footer .brand-mark{filter:none!important;text-shadow:none!important}
+.hero-main{box-sizing:border-box!important;min-height:max(760px,calc(100svh - var(--header-h)))!important;height:auto!important;max-height:none!important;overflow:hidden!important;align-items:stretch!important;padding:clamp(44px,5vw,100px) 0 clamp(70px,7vw,130px)!important}
+.hero-main .hero-content{width:min(1240px,90%)!important;margin:auto!important;padding:0!important;display:flex!important;flex-direction:column!important;gap:clamp(28px,4vw,60px)!important;position:relative!important;z-index:10!important}
+.hero-main .hero-topline{position:relative!important;top:auto!important;display:flex!important;align-items:center!important;justify-content:space-between!important;flex-wrap:wrap!important;gap:12px!important;width:100%!important}
+.hero-main .hero-title-box{position:relative!important;transform:none!important;min-width:0!important;padding:0!important;margin:0!important}
+.hero-main h1{font-size:clamp(66px,9.2vw,142px)!important;line-height:.83!important;margin:26px 0 30px!important;max-width:100%!important;text-wrap:balance;overflow-wrap:normal}
+.hero-main .hero-desc{max-width:610px!important;margin:0 0 24px!important}
+.hero-main .hero-ctas{display:flex!important;flex-wrap:wrap!important;gap:14px!important;position:relative!important;z-index:11!important;margin:16px 0 0!important}
+.hero-main .hero-ctas .btn{display:inline-flex!important;align-items:center!important;justify-content:center!important;white-space:normal!important;min-height:52px!important;padding:14px 23px!important}
+.hero-main .hero-bottom{position:relative!important;bottom:auto!important;left:auto!important;right:auto!important;width:100%!important;max-width:100%!important;display:flex!important;align-items:center!important;justify-content:space-between!important;flex-wrap:wrap!important;gap:18px!important;margin-top:clamp(32px,5vw,75px)!important;padding-top:20px!important}
+.hero-main .hero-side-text{pointer-events:none!important}
+.optimized-rain-control{top:auto!important;bottom:26px!important;right:clamp(15px,4vw,60px)!important;z-index:13!important}
+.ticker{position:relative!important;z-index:2!important;margin:0!important}
+.inner-hero{box-sizing:border-box!important;padding:clamp(85px,9vw,155px) 0 clamp(85px,9vw,155px)!important;min-height:clamp(480px,65vh,760px)!important;display:flex!important;align-items:center!important}
+.inner-hero .inner-hero-content{position:relative!important;z-index:4!important;padding:0!important;margin:auto!important}
+.inner-hero h1{font-size:clamp(60px,8.5vw,125px)!important;line-height:.91!important;margin:20px 0!important}
+.inner-hero p{max-width:650px}
+.protagonist-feature{display:grid!important;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)!important;gap:clamp(30px,5vw,95px)!important;align-items:center!important;margin:36px 0 0!important}
+.protagonist-visual{position:relative!important;min-width:0!important;overflow:hidden!important;background:#0d1514!important;border:1px solid #cbaa7530}
+.protagonist-visual img{width:100%!important;height:clamp(490px,58vw,850px)!important;object-fit:cover!important;object-position:center 20%!important}
+.protagonist-visual .subject-badge{position:absolute!important;left:20px!important;bottom:20px!important;background:#080d0ddd!important;padding:9px 12px!important;font:10px 'DM Mono',monospace!important}
+.protagonist-bio{min-width:0!important;max-width:100%!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:15px!important}
+.protagonist-bio h2{margin:7px 0 20px!important}
+.protagonist-bio p{font-size:clamp(14px,1.1vw,17px)!important;line-height:1.9!important;max-width:620px!important;margin:0!important}
+.protagonist-bio .data-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;width:100%!important;margin-top:20px!important}
+.protagonist-bio .data-grid>div{padding:18px!important;min-width:0!important;border:1px solid #d2b77f24}
+.protagonist-bio .data-grid small,.protagonist-bio .data-grid b{display:block!important;overflow-wrap:anywhere!important}
+.species-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:15px!important;align-items:stretch!important;margin:26px 0 0!important}
+.species-card{box-sizing:border-box!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:17px!important;min-width:0!important;min-height:280px!important;padding:clamp(23px,2.8vw,40px)!important;background:#111919!important;border:1px solid #d9b47b30!important;overflow:hidden!important}
+.species-card h3{font:500 clamp(31px,2.6vw,46px)/1.05 'Cormorant Garamond',serif!important;margin:0!important}
+.species-card p{font:14px/1.8 Manrope,sans-serif!important;color:#c1c5bb!important;margin:0!important}
+.species-card .species-indicator{margin-top:auto!important;padding-top:13px!important;line-height:1.5!important;font-size:10px!important;overflow-wrap:anywhere!important}
+.creature-picture img{width:100%!important;height:auto!important;max-height:650px!important;object-fit:contain!important}
+.creature-big{align-items:center!important}
+.section-header{margin-bottom:35px!important}
+@media(max-width:950px){.protagonist-feature{grid-template-columns:1fr!important}.protagonist-visual img{height:auto!important;max-height:730px!important;object-fit:contain!important}.species-grid{grid-template-columns:1fr!important}.species-card{min-height:0!important}.hero-main h1{font-size:clamp(60px,11vw,108px)!important}}
+@media(max-width:650px){:root{--header-h:66px}.hero-main{min-height:calc(100svh - var(--header-h))!important;padding:46px 0 95px!important}.hero-main .hero-content{gap:20px!important}.hero-main h1{font-size:clamp(48px,12.5vw,80px)!important;line-height:.89!important;margin:20px 0!important}.hero-main .hero-topline .section-index{display:none}.hero-main .hero-bottom{margin-top:20px!important;gap:12px!important}.hero-main .hero-ctas .btn{width:100%!important}.optimized-rain-control{bottom:12px!important;right:12px!important}.inner-hero{padding:75px 0 80px!important;min-height:430px!important}.inner-hero h1{font-size:clamp(54px,12vw,83px)!important}.protagonist-bio .data-grid{gap:8px!important}.protagonist-bio .data-grid>div{padding:12px!important}.protagonist-visual .subject-badge{font-size:8px!important}.species-card{padding:24px!important}}
