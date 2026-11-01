@@ -1,0 +1,66 @@
+
+/* FILAMENT / layout restoration — section system 2026 */
+:root{--f-gold:#d9b47b;--f-bg:#0a0e0f;--f-border:rgba(217,180,123,.22)}
+/* unified, genuinely responsive section foundations */
+main>section{position:relative}
+main .section.container{width:min(1240px,90%);margin-left:auto;margin-right:auto}
+.section-header{display:grid!important;grid-template-columns:minmax(0,1.2fr) minmax(250px,.8fr);align-items:end;column-gap:clamp(24px,5vw,90px)!important;row-gap:20px!important;margin-bottom:38px}
+.section-header>div,.section-header>p{min-width:0}
+.section-header>p{max-width:550px;margin:0;color:#bdbbb2;line-height:1.85;font-size:clamp(14px,1.15vw,17px)}
+.display-heading{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:.98;font-size:clamp(52px,6.3vw,104px);letter-spacing:-.045em;margin:20px 0 0}
+.display-heading em{font-weight:400;color:var(--f-gold)}
+/* threat gallery — previously unstyled and collapsing */
+.secondary-threats{padding:clamp(70px,8vw,130px) 0;background:linear-gradient(180deg,#0c1011,#121818 48%,#0a0e0f);border-top:1px solid #ffffff10}
+.secondary-threats .container{width:min(1240px,90%);margin:auto}
+.two-threats{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,2.5vw,34px);align-items:stretch;margin-top:40px}
+.threat-panel{min-width:0;display:grid!important;grid-template-rows:minmax(240px,340px) 1fr;overflow:hidden;border:1px solid var(--f-border);background:#0c1112;transition:transform .3s ease,border-color .3s}
+.threat-panel:hover{transform:translateY(-4px);border-color:#d9b47b77}
+.threat-graphic{position:relative!important;display:grid!important;place-items:center!important;min-height:240px!important;height:100%!important;background-color:#192125!important;background-size:cover!important;background-position:center!important;overflow:hidden;border-bottom:1px solid var(--f-border)}
+.threat-graphic::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#131c1f0d,#070a0ba3),radial-gradient(circle at center,#d9b47b17,transparent 60%);pointer-events:none}
+.threat-graphic>span{position:relative;z-index:1;font:400 90px 'Cormorant Garamond',Georgia,serif;color:#d8b786}
+.threat-panel>div:last-child{padding:clamp(24px,3.2vw,46px)!important;display:flex;flex-direction:column;align-items:flex-start;gap:12px;min-width:0}
+.threat-panel h3{font:500 clamp(34px,3.6vw,60px)/1 'Cormorant Garamond',Georgia,serif;letter-spacing:-.02em;margin:9px 0 7px}
+.threat-panel p{color:#bfc3bb;font-size:15px;line-height:1.85;margin:0;max-width:600px}
+.threat-panel .design-note{margin-top:auto!important;padding-top:25px;font:10px 'DM Mono',monospace!important;letter-spacing:.13em;color:var(--f-gold);overflow-wrap:anywhere}
+/* major encounter */
+.creature-big{display:grid!important;grid-template-columns:minmax(0,.87fr) minmax(0,1.13fr);align-items:center;gap:clamp(30px,5vw,85px);min-height:0;margin:40px 0 80px}
+.creature-copy{min-width:0;padding:20px 0}.creature-copy p{color:#c4c5ba;line-height:1.9;font-size:15px;max-width:520px}
+.creature-picture{min-width:0;overflow:hidden;border:1px solid var(--f-border);background:#111b1a}
+.creature-picture img{display:block;width:100%;height:clamp(370px,43vw,660px);object-fit:cover}
+.creature-signal{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.creature-signal>span{font:9px 'DM Mono',monospace;letter-spacing:.12em;color:var(--f-gold)}
+/* Other previously unstyled media grids */
+.character-gallery,.weapon-gallery,.mechanics-layout{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2vw,26px);align-items:start}
+.character-gallery figure,.weapon-gallery figure,.mechanics-layout>*{margin:0;min-width:0}
+.character-gallery img,.weapon-gallery img,.mechanics-layout img{width:100%;height:auto;max-height:580px;object-fit:contain;background:#101515;display:block;border:1px solid #d9b47b24}
+.character-gallery figcaption,.weapon-gallery figcaption{padding:12px 3px;display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between}
+.mechanic-shot{min-width:0;display:block}.mechanic-shot span{display:block;padding:12px 0;color:var(--f-gold);font:10px 'DM Mono',monospace}
+.profile-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.profile-card{min-height:300px}
+.tower-detail,.encounter-feature,.hero-character,.feature-story{min-width:0}
+.tower-detail img,.encounter-feature img,.hero-character img{max-width:100%}
+/* Preserve section visibility and prevent fake "missing" content from old reveal rules */
+.reveal,.scroll-appear{opacity:1!important;transform:none!important}
+img{height:auto}
+body{overflow-x:clip}
+@media(max-width:900px){
+.section-header{grid-template-columns:1fr!important;gap:12px!important;align-items:start!important}
+.two-threats,.creature-big{grid-template-columns:1fr!important}
+.creature-big{margin:25px 0 55px}
+.creature-picture img{height:auto;max-height:630px;object-fit:cover}
+.threat-panel{grid-template-rows:260px 1fr}
+}
+@media(max-width:640px){
+.secondary-threats{padding:62px 0!important}
+.section-header{margin-bottom:25px!important}
+.display-heading{font-size:clamp(46px,13vw,75px)}
+.two-threats{gap:17px!important}
+.threat-panel{grid-template-rows:230px 1fr}
+.threat-panel>div:last-child{padding:26px 23px!important}
+.threat-panel h3{font-size:40px}
+.threat-graphic{min-height:220px!important}
+.creature-picture img{max-height:420px}
+.character-gallery,.weapon-gallery,.mechanics-layout{grid-template-columns:1fr!important}
+.profile-grid{grid-template-columns:1fr!important}
+.footer .footer-wordmark{font-size:clamp(25px,7vw,34px)}
+}
