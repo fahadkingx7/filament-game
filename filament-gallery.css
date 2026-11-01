@@ -39,3 +39,20 @@
 .fg-cinematic-grid .fg-image-unavailable:before{content:"ARTWORK FILE AWAITING UPLOAD";font:10px/1.7 'DM Mono',monospace;letter-spacing:.12em;color:#c6aa79;padding:20px;text-align:center}
 .fg-cinematic-grid .fg-image-unavailable .gallery-zoom{display:none}
 @media(max-width:700px){.fg-cinematic-grid{grid-template-columns:1fr;gap:16px}.fg-cinematic-grid .gallery-photo{min-height:200px}}
+
+/* v6: mobile gallery is always a single, readable card per row */
+@media(max-width:700px){
+ .fg-main .gallery-grid,
+ .fg-main #characters .gallery-grid,
+ .fg-main #studies .gallery-grid,
+ .fg-main .fg-cinematic-grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:16px!important}
+ .fg-main .gallery-card{width:100%!important;min-width:0!important}
+ .fg-main #characters .gallery-photo,
+ .fg-main #studies .gallery-photo{height:clamp(360px,105vw,560px)!important}
+ .fg-main #characters .gallery-photo img,
+ .fg-main #studies .gallery-photo img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important}
+ .fg-main .gallery-caption{padding:21px!important}
+ .fg-main .gallery-caption h3{font-size:clamp(28px,7vw,38px)!important}
+ .fg-main .gallery-caption p{font-size:13px!important}
+ .fg-main .gallery-id{font-size:10px!important}
+}
