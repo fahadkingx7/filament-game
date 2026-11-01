@@ -22,3 +22,17 @@
 .moth-display h3{margin-top:8px!important}
 .profile-icon svg,.moth-glyph svg,.system-icon svg,.tiny-star svg,.bulb-toggle-icon svg,.ticker svg{max-width:100%!important;max-height:100%!important}
 @media(max-width:700px){.moth-display .moth-visual{width:46px!important;height:46px!important}.moth-display .moth-visual svg{width:38px!important;height:38px!important}}
+
+/* V14 / final optical baseline and reliable light state */
+.site-header .wordmark .brand-mark{transform:translateY(0px)!important;align-self:center!important}
+.site-header .wordmark .filament-logo-symbol{filter:none!important}
+@media(max-width:700px){.site-header .wordmark .brand-mark{transform:translateY(0px)!important}}
+#bulb-toggle{position:relative!important;z-index:35!important;pointer-events:auto!important;cursor:pointer!important;touch-action:manipulation!important}
+body.light-off .hero-main .hero-scene{filter:brightness(.12) saturate(.4)!important;transition:filter .45s ease!important}
+body.light-off .hero-main .hero-glow,body.light-off .filament-depth{opacity:0!important;visibility:hidden!important}
+body.light-off .hero-main .hero-vignette{background:linear-gradient(90deg,#000d,#000b),linear-gradient(0deg,#000b,transparent)!important}
+body:not(.light-off) .hero-main .hero-scene{filter:brightness(.72) saturate(.78) contrast(1.1)!important;transition:filter .45s ease!important}
+body.light-off #bulb-toggle{border-color:#5b625a!important;color:#9ea29a!important}
+body.light-off #bulb-toggle .switch{background:#454c4a!important}
+body.light-off #bulb-toggle .switch i{transform:translateX(0)!important}
+body:not(.light-off) #bulb-toggle .switch i{transform:translateX(14px)!important}
