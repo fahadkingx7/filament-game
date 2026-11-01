@@ -1,0 +1,19 @@
+/* FILAMENT v17 / functional systems design */
+.power-interface,.moth-display,.moth-collection{position:relative!important;z-index:2!important;pointer-events:auto!important}
+.power-interface button,.moth-collection button{pointer-events:auto!important;touch-action:manipulation!important}
+.moth-lab{display:grid!important;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)!important;gap:clamp(18px,3vw,50px)!important;align-items:stretch!important;margin-top:36px!important}
+.moth-collection{display:flex!important;flex-direction:column!important;gap:9px!important;min-width:0!important}
+.moth-collection .lab-head{margin-bottom:10px!important}
+.moth-collection .moth-button{flex:none!important}
+.moth-display{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:15px!important;min-width:0!important;min-height:330px!important;background:linear-gradient(140deg,#18231e,#0b1312)!important;border:1px solid #d9b47b38!important;padding:clamp(25px,3.6vw,55px)!important}
+.moth-display .moth-visual{width:100%!important;max-width:330px!important;height:180px!important;max-height:180px!important;min-height:180px!important;margin:0!important;background-position:center!important;background-size:cover!important;background-repeat:no-repeat!important;border:1px solid #d9b47b36!important}
+.moth-display .moth-visual::after{top:151px!important}
+.moth-display h3{margin:0!important;font:500 clamp(31px,3vw,50px)/1.05 'Cormorant Garamond',serif!important;letter-spacing:-.025em!important}
+.moth-display p{font:14px/1.85 Manrope,sans-serif!important;color:#c3c7bc!important;margin:0!important;max-width:520px!important}
+.moth-meta{display:flex!important;flex-wrap:wrap!important;gap:10px 22px!important;margin-top:12px!important;font:10px 'DM Mono',monospace!important;color:#cdb891!important}
+.moth-footnote{display:block!important;clear:both!important;margin-top:22px!important;padding:16px 20px!important;max-width:100%!important;border-left:2px solid #d9b47b77!important;background:#d9b47b0c!important;color:#bebcb1!important;font:12px/1.7 'DM Mono',monospace!important;letter-spacing:.015em!important}
+.crank-button{position:relative!important;z-index:3!important}
+.crank-icon.crank-spin{animation:filament-turn .4s ease-out}
+@keyframes filament-turn{to{transform:rotate(360deg)}}
+@media(max-width:860px){.moth-lab{grid-template-columns:1fr!important}.moth-display{min-height:0!important}.moth-display .moth-visual{height:145px!important;min-height:145px!important;max-height:145px!important}.moth-display .moth-visual::after{top:117px!important}}
+@media(prefers-reduced-motion:reduce){.crank-icon.crank-spin{animation:none}}

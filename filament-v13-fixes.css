@@ -1,0 +1,38 @@
+
+/* FILAMENT V13 — surgical visual regression fixes */
+.site-header .wordmark .brand-mark{transform:translateY(6px)!important;filter:none!important;text-shadow:none!important}
+.site-header .wordmark .brand-mark svg,.site-header .filament-logo-symbol,.footer .brand-mark svg,.footer .filament-logo-symbol{filter:none!important;box-shadow:none!important}
+@media(max-width:700px){.site-header .wordmark .brand-mark{transform:translateY(6px)!important}}
+/* Keep original character art whole and its head visible */
+.protagonist-feature .protagonist-visual{display:flex!important;align-items:center!important;justify-content:center!important;min-height:0!important;overflow:hidden!important}
+.protagonist-feature .protagonist-visual img{width:100%!important;height:auto!important;max-height:800px!important;object-fit:contain!important;object-position:top center!important;display:block!important}
+.protagonist-feature .protagonist-visual .subject-badge{z-index:2}
+@media(min-width:951px){.protagonist-feature{align-items:start!important}.protagonist-feature .protagonist-bio{align-self:center!important}}
+/* Hero headline: prevent terminal letters being clipped */
+.hero-main .hero-title-box{overflow:visible!important;padding-right:clamp(18px,3vw,65px)!important}
+.hero-main .hero-title-box h1{width:max-content!important;max-width:100%!important;box-sizing:border-box!important;overflow:visible!important;letter-spacing:-.045em!important;font-size:clamp(58px,8.5vw,130px)!important}
+.hero-main .hero-title-box h1 em{display:inline-block!important;padding-right:.14em!important;margin-right:-.06em!important;overflow:visible!important}
+.hero-main .hero-content{overflow:visible!important}
+@media(max-width:850px){.hero-main .hero-title-box h1{width:100%!important;font-size:clamp(46px,10vw,85px)!important}}
+@media(max-width:500px){.hero-main .hero-title-box h1{font-size:clamp(42px,11vw,58px)!important;letter-spacing:-.04em!important}}
+/* No SVG may grow beyond its intentionally allocated icon */
+.moth-display .moth-visual{display:flex!important;justify-content:flex-start!important;align-items:center!important;width:64px!important;height:64px!important;max-width:64px!important;max-height:64px!important;min-height:0!important;flex:none!important;margin:16px 0 20px!important;overflow:visible!important;color:#d9b47b!important}
+.moth-display .moth-visual svg{display:block!important;width:52px!important;height:52px!important;max-width:52px!important;max-height:52px!important;min-width:0!important;min-height:0!important;flex:none!important;filter:none!important}
+.moth-display{min-width:0!important;min-height:0!important}
+.moth-display h3{margin-top:8px!important}
+.profile-icon svg,.moth-glyph svg,.system-icon svg,.tiny-star svg,.bulb-toggle-icon svg,.ticker svg{max-width:100%!important;max-height:100%!important}
+@media(max-width:700px){.moth-display .moth-visual{width:46px!important;height:46px!important}.moth-display .moth-visual svg{width:38px!important;height:38px!important}}
+
+/* V14 / final optical baseline and reliable light state */
+.site-header .wordmark .brand-mark{transform:translateY(0px)!important;align-self:center!important}
+.site-header .wordmark .filament-logo-symbol{filter:none!important}
+@media(max-width:700px){.site-header .wordmark .brand-mark{transform:translateY(0px)!important}}
+#bulb-toggle{position:relative!important;z-index:35!important;pointer-events:auto!important;cursor:pointer!important;touch-action:manipulation!important}
+body.light-off .hero-main .hero-scene{filter:brightness(.12) saturate(.4)!important;transition:filter .45s ease!important}
+body.light-off .hero-main .hero-glow,body.light-off .filament-depth{opacity:0!important;visibility:hidden!important}
+body.light-off .hero-main .hero-vignette{background:linear-gradient(90deg,#000d,#000b),linear-gradient(0deg,#000b,transparent)!important}
+body:not(.light-off) .hero-main .hero-scene{filter:brightness(.72) saturate(.78) contrast(1.1)!important;transition:filter .45s ease!important}
+body.light-off #bulb-toggle{border-color:#5b625a!important;color:#9ea29a!important}
+body.light-off #bulb-toggle .switch{background:#454c4a!important}
+body.light-off #bulb-toggle .switch i{transform:translateX(0)!important}
+body:not(.light-off) #bulb-toggle .switch i{transform:translateX(14px)!important}
